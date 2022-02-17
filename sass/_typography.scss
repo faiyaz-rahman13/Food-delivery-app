@@ -1,0 +1,32 @@
+@import "variable";
+
+
+.heading-primary{
+    font-size: $text-lg;
+    font-weight: 700;
+    font-family: $font-poppins;
+    width: 95rem;
+    margin: 0 auto;
+}
+
+.heading-secondary{
+    font-size: $text-md;
+    font-family: $font-monserrat;
+    font-weight: 600;
+    color: $color-dark;
+}
+
+.heading-tertiary{
+    font-family: $font-monserrat;
+    font-size: $text-sm;
+    font-weight:700;
+    color: $color-primary;
+}
+
+.p-primary{
+    font-family: $font-monserrat;
+    font-weight: 500;
+    color: $color-semi-dark;
+    font-size: $text-sm;
+    margin-bottom: 5.4rem;
+}

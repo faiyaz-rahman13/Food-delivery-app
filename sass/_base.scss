@@ -1,0 +1,52 @@
+@import "variable";
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color: $color-primary;
+    color: white;
+}
+
+img::selection{
+    background-color: transparent;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+
+body{
+    overflow-x: hidden !important;
+}
+
+body::-webkit-scrollbar{
+    width: 1.5rem;
+}
+body::-webkit-scrollbar-track{
+    background: rgba($color-semi-dark,.5);
+}
+
+body::-webkit-scrollbar-thumb{
+    background:rgba($color-primary,.9);
+    border-radius: 2rem;
+    box-shadow: 0 .5rem 1rem  rgba(0,0,0,.5);
+}
+
+h1{
+    font-family: $font-poppins;
+}
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $font-monserrat;
+}

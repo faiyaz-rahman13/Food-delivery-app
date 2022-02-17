@@ -1,0 +1,153 @@
+@import "variable";
+@import "animation";
+
+// HEADER SECTION
+
+// navbar
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    min-height: 18vh;
+
+    ul{
+        display: flex;
+        gap: 9.4rem;
+        list-style-type: none;
+        li{
+            a{
+                text-decoration: none;
+                color: $color-semi-dark;
+                font-family: $font-monserrat;
+                font-size: $text-xt-sm;
+                font-weight: 700;
+                position: relative;
+                transition: all .2s ease;
+                
+
+                &:hover{
+                    color: $color-primary;
+                }
+
+                &::before{
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    background-color: $color-primary;
+                    position:absolute;
+                    bottom: 0;
+                    left: 0;
+                    margin-bottom: -1rem;
+                    transform: scale(0);
+                    transition: all .2s ease-in;
+                }
+
+                &:hover::before{
+                    transform: scale(1);
+                    transform-origin: center;
+                }
+            }
+
+
+            .active{
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+header{
+    min-height: 100vh;
+}
+
+.header__container{
+    padding: 7.2rem 0;
+    background: url(../img/back-1.png) no-repeat;
+    background-size: cover;
+    min-height: 80vh;
+    text-align: center;
+}
+
+
+// MOBILE SECTION 
+
+.mobile__container{
+    min-height: 50vh;
+    border-bottom: 3px solid $color-semi-dark;
+}
+
+.img-box{
+    animation: jump 2.5s linear infinite;
+
+    .img__main{
+        transform: translateX(2rem);
+        position: relative;
+        z-index: 2;
+    }
+
+    .img__sub{
+        transform: translateX(-2rem) translateY(6rem);
+    }
+}
+
+
+// FEATURE SECTION 
+
+
+#features{
+    padding: 5rem 0;
+}
+
+.feature__box{
+    max-width: 56rem;
+
+    &--2{
+        margin-left: 18rem;
+    }
+}
+
+
+
+
+// CTA SECTION 
+
+
+.cta__container{
+    min-height: 60vh;
+    background: url(../img/back-2.png) no-repeat;
+    background-size: cover;
+    padding: 13rem 0;
+
+    h1{
+        font-size: 4rem;
+    }
+}
+
+
+// FOOTER SECTION 
+
+
+.footer__container{
+    min-height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon-box{
+        display: flex;
+        gap: 3.5rem;
+        align-items: center;
+        
+        .icon{
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .copyright{
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}

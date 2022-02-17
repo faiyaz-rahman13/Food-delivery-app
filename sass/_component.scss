@@ -1,0 +1,81 @@
+@import "variable";
+
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 99;
+}
+#status {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% -50%);
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+  }
+
+
+
+.logo{
+    width: 20rem;
+}
+
+.row{
+    margin-bottom: 15rem;
+}
+.button{
+    padding: 1.6rem 4rem;
+    font-family: $font-monserrat;
+    font-size: $text-sm;
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-white;
+    margin: 0 2rem;
+
+    &:hover{
+        color: $color-white;
+    }
+
+    &__primary{
+        background-color: $color-primary;
+        border-radius: 1.5rem;
+        transition: all .2s ease-out;
+        position: relative;
+
+        &:hover{
+            color: $color-primary;
+            background-color: $color-white;
+        }
+
+    }
+
+    &__secondary{
+        border: 1px solid white;
+        border-radius: 1.5rem;
+        transition: all .2s ease-out;
+
+        &:hover{
+            color: $color-primary;
+            border: 1px solid $color-primary;
+        }
+    }
+}
+
+
+.button-2{
+    @extend .button;
+    padding: 1.8rem 3.6rem;
+    border-radius:1rem !important;
+    font-size: $text-xt-sm;
+}
+
